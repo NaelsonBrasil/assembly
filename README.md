@@ -31,8 +31,17 @@ represent numbers.
 You’ve been using the decimal (base 10) numbering system for so long that you probably take it for granted. When you see a number like “123”, you don’t think about the
 value 123; rather, you generate a mental image of how many items this value represents.
 In reality, however, the number 123 represents:
-1*102 + 2 * 101 + 3*100
 
+``` 1*10^2 + 2 * 10^1 + 3*100 ```
+
+``` 100+20+3 ``` 
+
+Each digit appearing to the left of the decimal point represents a value between zero
+and nine times an increasing power of ten. Digits appearing to the right of the decimal
+point represent a value between zero and nine times an increasing negative power of ten.
+For example, the value 123.456 means:
+```1*10^2 + 2*10^1 + 3*10^0 + 4*10^-1 + 5*10^-2 + 6*10^-3```
+``` 100 + 20 + 3 + 0.4 + 0.05 + 0.006 ```
 ```
 
 ```
