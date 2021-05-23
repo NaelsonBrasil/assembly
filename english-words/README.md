@@ -11,8 +11,8 @@
 - WordPress dashboard AS WELL AS ON the website. &nbsp; **Tão bem como no website**
 - Nevertheless &nbsp; **Não obastante**
 - first in last out &nbsp; **Primeiro entrar ultimo a sair**
--  &nbsp; ** **
--  &nbsp; ** **
+- remainder &nbsp; **Sobra,restante**
+- upon your understanding&nbsp; **Sobe**
 -  &nbsp; ** **
 -  &nbsp; ** **
 -  &nbsp; ** **
