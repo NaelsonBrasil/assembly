@@ -42,6 +42,8 @@ point represent a value between zero and nine times an increasing negative power
 For example, the value 123.456 means:
 ```1*10^2 + 2*10^1 + 3*10^0 + 4*10^-1 + 5*10^-2 + 6*10^-3```
 ``` 100 + 20 + 3 + 0.4 + 0.05 + 0.006 ```
+
+STOP IN 1.1.2
 ```
 
 ```
