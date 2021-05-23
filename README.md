@@ -26,6 +26,13 @@ Most modern computer systems **do not represent numeric values using the decimal
 system. Instead, **they typically use a binary or two’s complement numbering system.** To
 understand the limitations of computer arithmetic, you must understand how computers
 represent numbers.
+
+1.1.1 A Review of the Decimal System
+You’ve been using the decimal (base 10) numbering system for so long that you probably take it for granted. When you see a number like “123”, you don’t think about the
+value 123; rather, you generate a mental image of how many items this value represents.
+In reality, however, the number 123 represents:
+1*102 + 2 * 101 + 3*100
+
 ```
 
 ```

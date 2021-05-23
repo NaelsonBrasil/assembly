@@ -16,9 +16,9 @@
 - skim &nbsp; **reading selectively**
 - only vaguely familiar with it &nbsp; **vagamente**
 - carefully &nbsp; **Cuidadosamente**
--  &nbsp; ** **
--  &nbsp; ** **
--  &nbsp; ** **
+- system for so long that &nbsp; **Por tanto tempo que**
+- you probably take it for granted &nbsp; **leva isso como garantido**
+- rather &nbsp; **inves,bastante,muito**
 -  &nbsp; ** **
 -  &nbsp; ** **
 -  &nbsp; ** **
