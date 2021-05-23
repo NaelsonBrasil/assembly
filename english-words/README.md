@@ -14,8 +14,8 @@
 - remainder &nbsp; **Sobra,restante**
 - upon your understanding&nbsp; **Sobe**
 - skim &nbsp; **reading selectively**
--  only vaguely familiar with it &nbsp; **vagamente**
--  &nbsp; ** **
+- only vaguely familiar with it &nbsp; **vagamente**
+- carefully &nbsp; **Cuidadosamente**
 -  &nbsp; ** **
 -  &nbsp; ** **
 -  &nbsp; ** **
