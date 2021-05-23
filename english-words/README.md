@@ -1,4 +1,4 @@
 ##### English, word&phrases
 ---
-- stumbling &nbsp; **Tropreçando**
+- stumbling &nbsp; **Tropeçando**
 #####
