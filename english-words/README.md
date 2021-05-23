@@ -13,7 +13,7 @@
 - first in last out &nbsp; **Primeiro entrar ultimo a sair**
 - remainder &nbsp; **Sobra,restante**
 - upon your understanding&nbsp; **Sobe**
--  &nbsp; ** **
+- skim &nbsp; **reading selectively**
 -  &nbsp; ** **
 -  &nbsp; ** **
 -  &nbsp; ** **
