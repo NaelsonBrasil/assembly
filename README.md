@@ -20,6 +20,11 @@ concepts. If you are already familiar with these terms from other courses or stu
 should at least skim this material before proceeding to the next chapter. If you are unfamiliar with this material, or only vaguely familiar with it, you should study it carefully
 before proceeding. All of the material in this chapter is important! Do not skip over any material.
 
+1.1 Numbering Systems
+Most modern computer systems **do not represent numeric values using the decimal**
+system. Instead, **they typically use a binary or two’s complement numbering system.** To
+understand the limitations of computer arithmetic, you must understand how computers
+represent numbers.
 ```
 
 ```
