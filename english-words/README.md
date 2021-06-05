@@ -19,7 +19,7 @@
 - system for so long that &nbsp; **Por tanto tempo que**
 - you probably take it for granted &nbsp; **leva isso como garantido**
 - rather &nbsp; **inves,bastante,muito**
--  &nbsp; ** **
+-  &nbsp; *users spread over 70 countries. **espalhados pelos**
 -  &nbsp; ** **
 -  &nbsp; ** **
 -  &nbsp; ** **
