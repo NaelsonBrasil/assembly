@@ -1,0 +1,1 @@
+https://www.brainkart.com/article/Memory-Virtualization_11340/
