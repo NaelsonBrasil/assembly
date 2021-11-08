@@ -11,18 +11,19 @@ section	.text
 	global _start       ;must be declared for using gcc
 _start:                     ;tell linker entry point
 
-
-   mov eax, 4
-   mov ebx, 1 ;It is used to store the value of the offset.
-   mov ecx, msg
-   mov edx, 1
+  
+   mov eax, 4       ;sys_write
+   mov ebx, 1       ;ebx 
+   mov ecx, msg     ;ecx = "xxxxxxxxxxxxx"
+   mov edx, len       ;ecx new array[edx] = "xxxxxxxxxxxxx"
+  
    int 80h
-   mov	eax, 1	    ;system call number (sys_exit)
+   mov eax, 1	    ;system call number (sys_exit)
    int	0x80        ;call kernel
 
 section	.data
 
-msg	db	'Hello, world!',0xa	;our dear string
+msg	db	'Hello, world!hhhhhhhhhhhhhh'	;our dear string
 len	equ	$ - msg			;length of our dear string
 ``` 
 
@@ -30,7 +31,8 @@ len	equ	$ - msg			;length of our dear string
 @Kaunda Well, when you put the length in ecx and the pointer to the message into edx, the kernel still thinks that ecx contains the pointer to the message and edx contains the length of the message. A length interpreted as a pointer points nowhere useful and a pointer interpreted as a number is usually a very large number, so the kernel returns the error EFAULT meaning “invalid address” as @prl already explained. It's your job to turn the kernel's error codes into error messages. The kernel itself is rarely concerned with this (except under rare circumstances). 
 
 
-Since you know about basic programming languages things will get a lot easier Wink
+### Since you know about basic programming languages things will get a lot easier Wink
+https://forum.cheatengine.org/viewtopic.php?t=548644&sid=f9f9a83787ba946575dda00193f3b2d3
 
 well, written programms (except for java programs) compile into assembler. Assembler is a thery abstract language. Everything that assembler knows is:
 1: a universal stack. you can access it with the push and pop commands
@@ -127,3 +129,29 @@ And the "value of the pointer needed" is C419588. Note that this is exactly the 
 ``` 
 Well, read it a few times. Hope you understand most of it.
 As for the name, as long as you cant play it online, mentioning the name should be fine. Else, if you want further help, information like "rpg" or "shooter", what kind of value you were searching for (ammo, health, whatever) etc would be quite helpful.
+
+
+### Explain the concept of a stack frame in a nutshell
+
+
+If you understand stack very well then you will understand how memory works in program and if you understand how memory works in program you will understand how function store in program and if you understand how function store in program you will understand how recursive function works and if you understand how recursive function works you will understand how compiler works and if you understand how compiler works your mind will works as compiler and you will debug any program very easily
+
+Let me explain how stack works:
+
+First you have to know how functions are represented in stack :
+
+Heap stores dynamically allocated values.
+Stack stores automatic allocation and deletion values.
+
+
+https://stackoverflow.com/questions/1395591/what-is-exactly-the-base-pointer-and-stack-pointer-to-what-do-they-point
+https://stackoverflow.com/questions/1395591/what-is-exactly-the-base-pointer-and-stack-pointer-to-what-do-they-point
+ESP is the current stack pointer, which will change any time a word or address is pushed or popped onto/off off the stack. EBP is a more convenient way for the compiler to keep track of a function's parameters and local variables than using the ESP directly.
+
+Generally (and this may vary from compiler to compiler), all of the arguments to a function being called are pushed onto the stack by the calling function (usually in the reverse order that they're declared in the function prototype, but this varies). Then the function is called, which pushes the return address (EIP) onto the stack.
+
+Upon entry to the function, the old EBP value is pushed onto the stack and EBP is set to the value of ESP. Then the ESP is decremented (because the stack grows downward in memory) to allocate space for the function's local variables and temporaries. From that point on, during the execution of the function, the arguments to the function are located on the stack at positive offsets from EBP (because they were pushed prior to the function call), and the local variables are located at negative offsets from EBP (because they were allocated on the stack after the function entry). That's why the EBP is called the Frame Pointer, because it points to the center of the function call frame.
+
+Upon exit, all the function has to do is set ESP to the value of EBP (which deallocates the local variables from the stack, and exposes the entry EBP on the top of the stack), then pop the old EBP value from the stack, and then the function returns (popping the return address into EIP).
+
+Upon returning back to the calling function, it can then increment ESP in order to remove the function arguments it pushed onto the stack just prior to calling the other function. At this point, the stack is back in the same state it was in prior to invoking the called function.
