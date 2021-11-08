@@ -26,6 +26,21 @@ section	.data
 msg	db	'Hello, world!hhhhhhhhhhhhhh'	;our dear string
 len	equ	$ - msg			;length of our dear string
 ``` 
+### Reading off the stack in 8086 Assembly (16 bit mode)
+
+In the case of a true 8086, you can't use SP as a base register, only BP, so you need to copy SP to BP, then use BP +/- offset as the address of a stack based variable, such as
+
+        push    bp
+        mov     bp,sp
+        push    ax          ;[bp-2]
+        push    bx          ;[bp-4]
+        push    cx          ;[bp-6]
+        push    dx          ;[bp-8]
+        ...
+        mov     ax,[bp-4]   ;ax = pushed value from bx
+        ...
+        mov     sp,bp       ;restore sp
+        pop     bp          ;restore bp
 
 
 @Kaunda Well, when you put the length in ecx and the pointer to the message into edx, the kernel still thinks that ecx contains the pointer to the message and edx contains the length of the message. A length interpreted as a pointer points nowhere useful and a pointer interpreted as a number is usually a very large number, so the kernel returns the error EFAULT meaning “invalid address” as @prl already explained. It's your job to turn the kernel's error codes into error messages. The kernel itself is rarely concerned with this (except under rare circumstances). 
