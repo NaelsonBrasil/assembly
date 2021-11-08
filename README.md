@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=s1uOGjt0YJk
 ## https://www.ic.unicamp.br/~pannain/mc404/aulas/pdfs/Art%20Of%20Intel%20x86%20Assembly.pdf
 ##### 
 Data Representation
