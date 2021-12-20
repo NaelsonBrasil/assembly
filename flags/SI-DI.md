@@ -27,7 +27,24 @@ compiles into
 8B0C9A         mov    ecx,[edx+4*ebx]
 894CBDAC       mov    [ebp+4*edi-54],ecx
 47   
+
 ``` 
+
+// Type your code here, or load an example.
+int square(int num) {
+
+}
+
+
+OUT ASM 
+   push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], edi <-------------- EDI
+        nop
+        pop     rbp
+        ret
+``` 
+
 
 where ebp+12 contains argv, ebx is j, and edi has srcidx. Notice the third instruction uses edi mulitplied by 4 and adds ebp offset by 0x54 (the location of srcp); brackets around the address indicate indirection.
 
