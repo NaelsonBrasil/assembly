@@ -8,7 +8,9 @@ The address of the current instruction is kept in the Instruction Pointer (IP) r
 
 ``` 
 
-Instruction pointer is a register that holds the memory address of the instruction to be executed next. 
-
+1 Instruction pointer is a register that holds the memory address of the instruction to be executed next. 
+2 The CPU is hard-wired to read the instruction pointer and execute the instruction at that particular address.
+After an instruction is executed by the CPU, the instruction pointer is automatically incremented to point to the next instruction in a program. 
+Loops and other branching constructs change the control flow by changing the instruction pointer.
 
 ``` 
