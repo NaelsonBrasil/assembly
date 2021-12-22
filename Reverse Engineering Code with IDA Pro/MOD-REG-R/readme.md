@@ -44,3 +44,16 @@ Intel Reference Instruction Column
 
 
 ![MODE Reg - R/M](https://raw.githubusercontent.com/devnaelson/assembly/master/Reverse%20Engineering%20Code%20with%20IDA%20Pro/MOD-REG-R/rm.png)
+
+
+```
+No. It's more complicated, as you can see on sandpile.org/x86/opc_rm
+
+d8 = 11 011 000
+     11         = both operands are registers
+        011     = the 'r' operand is ebx
+            000 = the 'rm' operand is eax
+mov r32, imm32 works differently, the destination register is the low 3 bits of the opcode, here 000 so eax. In the manual, that type of encoding is written as a + sign after the opcode, as in B8+rd id.
+
+This is all explained in the manual, of course.
+```
