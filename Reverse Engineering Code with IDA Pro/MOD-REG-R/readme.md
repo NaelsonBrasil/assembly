@@ -1,6 +1,6 @@
 http://www.c-jump.com/CIS77/CPU/x86/X77_0090_addressing_modes.htm
 
-´´´
+```
 Encoding Real x86 Instructions
 x86 Instructions Overview
 x86 Instruction Format Reference
@@ -40,4 +40,7 @@ Intel Reference Opcode Bytes, Cont.
 Intel Reference Opcode Bytes, Cont.
 Intel Reference Opcode Bytes, Cont.
 Intel Reference Instruction Column
-´´´
+```
+
+
+![MODE Reg - R/M](https://raw.githubusercontent.com/devnaelson/assembly/master/Reverse%20Engineering%20Code%20with%20IDA%20Pro/MOD-REG-R/rm.png)
