@@ -45,6 +45,7 @@ Intel Reference Instruction Column
 
 ![MODE Reg - R/M](https://raw.githubusercontent.com/devnaelson/assembly/master/Reverse%20Engineering%20Code%20with%20IDA%20Pro/MOD-REG-R/rm.png)
 
+https://www.youtube.com/watch?v=O4vUzl33rNw&list=PLfMCiCIRnpUmn-O0umAYuI270lr2myoML
 
 ```
 No. It's more complicated, as you can see on sandpile.org/x86/opc_rm
