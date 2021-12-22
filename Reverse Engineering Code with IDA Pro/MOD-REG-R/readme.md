@@ -57,3 +57,23 @@ mov r32, imm32 works differently, the destination register is the low 3 bits of 
 
 This is all explained in the manual, of course.
 ```
+
+```
+0xC9 (leave)
+0x31, 0xc0 (xor eax, eax)
+0xC9 (ret)
+-----
+0x31 operator 
+
+0xc0 = Operands
+
+```
+Operands
+An x86 instruction can have zero to three operands. Operands are separated by commas (,) (ASCII 0x2C). For instructions with two operands, the first (lefthand) operand is the source operand, and the second (righthand) operand is the destination operand (that is, source->destination).
+
+Note –
+The Intel assembler uses the opposite order (destination<-source) for operands.
+
+Operands can be immediate (that is, constant expressions that evaluate to an inline value), register (a value in the processor number registers), or memory (a value stored in memory). An indirect operand contains the address of the actual operand value. Indirect operands are specified by prefixing the operand with an asterisk (*) (ASCII 0x2A). Only jump and call instructions can use indirect operands.
+
+
