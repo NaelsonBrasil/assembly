@@ -1,5 +1,7 @@
 http://www.c-jump.com/CIS77/CPU/x86/X77_0090_addressing_modes.htm
 
+Opration Code 
+
 ```
 Encoding Real x86 Instructions
 x86 Instructions Overview
