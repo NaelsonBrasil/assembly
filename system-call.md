@@ -1,6 +1,5 @@
 https://www.tutorialspoint.com/assembly_programming/assembly_system_calls.htm
-
-
+https://web.archive.org/web/20120822144129/http://www.cin.ufpe.br/~if817/arquivos/asmtut/index.html
 https://www.geeksforgeeks.org/general-purpose-registers-8086-microprocessor/
 
 others things i should know about assembly language beyond system call?
@@ -170,3 +169,46 @@ Upon entry to the function, the old EBP value is pushed onto the stack and EBP i
 Upon exit, all the function has to do is set ESP to the value of EBP (which deallocates the local variables from the stack, and exposes the entry EBP on the top of the stack), then pop the old EBP value from the stack, and then the function returns (popping the return address into EIP).
 
 Upon returning back to the calling function, it can then increment ESP in order to remove the function arguments it pushed onto the stack just prior to calling the other function. At this point, the stack is back in the same state it was in prior to invoking the called function.
+
+
+https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md?fbclid=IwAR0fNOzL5lhWk2Yt_lrj69UOge_h-GmJEtyxnZ8ieMjVoAGNjPPA4B7bUnk
+https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/
+``` 
+// Type your code here, or load an example.
+long myfunc(long a, long b, long c, long d,long e, long f, long g, long h)
+{
+    long xx = a * b * c * d * e * f * g * h;
+    return xx + 20;
+}
+``` 
+
+``` 
+      push    rbp
+        mov     rbp, rsp
+
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     QWORD PTR [rbp-40], rdx
+        mov     QWORD PTR [rbp-48], rcx
+        mov     QWORD PTR [rbp-56], r8
+        mov     QWORD PTR [rbp-64], r9
+
+        mov     rax, QWORD PTR [rbp-24]
+        imul    rax, QWORD PTR [rbp-32]
+        imul    rax, QWORD PTR [rbp-40]
+        imul    rax, QWORD PTR [rbp-48]
+        imul    rax, QWORD PTR [rbp-56]
+        imul    rax, QWORD PTR [rbp-64]
+
+        imul    rax, QWORD PTR [rbp+16]
+        mov     rdx, QWORD PTR [rbp+24]
+        imul    rax, rdx
+
+        mov     QWORD PTR [rbp-8], rax
+        mov     rax, QWORD PTR [rbp-8]
+        add     rax, 20
+        pop     rbp
+        ret
+ ``` 
+
+ - question, dont would be have one [rbp-16] ?
