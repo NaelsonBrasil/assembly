@@ -21,12 +21,12 @@ As the title says, general register are the one we use most of the time Most of 
  8 bits : AH AL BH BL CH CL DH DL
 ```
 
-- EAX,AX,AH,AL : Called the Accumulator register<br>
- It is used for I/O port access, arithmetic, interrupt calls,<br>
-- EBX,BX,BH,BL : Called the Base register,<br>
-it is used as a base pointer for memory access Gets some interrupt return values,<br>
-- ECX,CX,CH,CL : Called the Counter register,<br>
-it is used as a loop counter and for shifts Gets some interrupt values.<br>
-- EDX,DX,DH,DL : Called the Data register.<br>
-               It is used for I/O port access, arithmetic, some interrupt 
+###### EAX,AX,AH,AL : Called the Accumulator register<br>
+- It is used for I/O port access, arithmetic, interrupt calls,<br>
+###### EBX,BX,BH,BL : Called the Base register,<br>
+- it is used as a base pointer for memory access Gets some interrupt return values,<br>
+###### ECX,CX,CH,CL : Called the Counter register,<br>
+- it is used as a loop counter and for shifts Gets some interrupt values.<br>
+###### EDX,DX,DH,DL : Called the Data register.<br>
+-              It is used for I/O port access, arithmetic, some interrupt 
                calls.<br>
