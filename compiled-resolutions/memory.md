@@ -3,11 +3,14 @@
 - Shows the offset (location) of each line in the byte string.
 - Little Endian UTF-16 Text
 
-offset address<br> 
-                      header<br>
-           0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15<br>
-0x00000000<br>
-0x00000010<br>
+```
+                             header
+offset address   0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+0x00000000
+0x00000010
+
+
+```
 [reference](https://github.com/devnaelson/assembly/blob/master/compiled-resolutions/hex-editor/hexeditor.md)
 
 #### Hexdecimal litter indian
