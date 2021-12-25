@@ -37,10 +37,10 @@ Big Endian
 
 whole BC614E = 12345678 more convert in binary first you can know what is the leat significant byte
 
-offset<br>
+offset
            0  1  2  3  4  5 6 7 8 9 10 11 12 13 14 15
 0x00000000 4E 61 BC
-0x00000010<br>
+0x00000010
 
 ```
 - opcode(code operation) vs machine code
