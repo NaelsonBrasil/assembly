@@ -12,3 +12,28 @@ sub esp, 20   ; allocate 20 bytes worth of locals on stack.
 
 
 https://faculty.kfupm.edu.sa/COE/shazli/coe205/Help/asm_tutorial_09.html
+
+
+The difference between cs, ds, ss, es in the register
+First, the register in the CPU is used to store the physical address of the data in the memory
+
+cs is a code segment register, generally used to store code;
+
+ Usually used with IP to process the next executed code
+
+cs:IP
+
+Base address: Offset address
+
+The data corresponding to the cs address is equivalent to the code statement in the c language
+
+ds is the data segment register, generally used to store data;
+
+The data corresponding to the ds address is equivalent to the global variable in c language
+
+ss is a stack segment register, generally used as a stack and sp partner;
+
+The data corresponding to the ss address is equivalent to the local variable in c language
+ss is equivalent to the first address of the stack segment sp is equivalent to the offset address of the stack segment
+
+es is the extended segment register; 
