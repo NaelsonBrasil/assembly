@@ -3,8 +3,10 @@
 - Shows the offset (location) of each line in the byte string.
 - Little Endian UTF-16 Text
 
-offset address<br>
-0x00000000 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15<br>
+offset address<br> 
+-                       header
+-           0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+0x00000000<BR>
 0x00000010<br>
 [reference](https://github.com/devnaelson/assembly/blob/master/compiled-resolutions/hex-editor/hexeditor.md)
 
