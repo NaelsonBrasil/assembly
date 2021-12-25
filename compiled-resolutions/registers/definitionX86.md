@@ -27,5 +27,12 @@ As the title says, general register are the one we use most of the time Most of 
 - It is used as a base pointer for memory access Gets some interrupt return values,
 ##### ECX,CX,CH,CL : Called the Counter register
 - It is used as a loop counter and for shifts Gets some interrupt values.
-##### EDX,DX,DH,DL : Called the Data register.
+##### EDX,DX,DH,DL : Called the Data register
 - It is used for I/O port access, arithmetic, some interrupt calls.
+
+
+###### segment registers or Memory Segmentation in 8086 Microprocessor
+
+```
+Segmentation is the process in which the main memory of the computer is logically divided into different segments and each segment has its own base address. It is basically used to enhance the speed of execution of the computer system, so that the processor is able to fetch and execute the data from the memory easily and fast.
+```
