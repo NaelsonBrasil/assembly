@@ -46,5 +46,5 @@ Segmentation is the process in which the main memory of the computer is logicall
 ##### Stack Segment Register (SS): 
 - is used for addressing stack segment of the memory. The stack segment is that segment of memory which is used to store stack data.
 
-![MySQL](memory-segment/1.gif)
-![MySQL](memory-segment/2.gif)
+![MySQL](../memory-segment/1.gif)
+![MySQL](../memory-segment/2.gif)
