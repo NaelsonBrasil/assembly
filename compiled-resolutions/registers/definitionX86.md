@@ -48,3 +48,30 @@ Segmentation is the process in which the main memory of the computer is logicall
 
 ![MySQL](https://qph.fs.quoracdn.net/main-qimg-8d059228ebba03bd803df7fa9b420be3)
 ![MySQL](https://qph.fs.quoracdn.net/main-qimg-393f9b74e7266dab96e3a6be84284dac-pjlq)
+
+
+
+
+##### Indexes and pointers
+
+```
+Indexes and pointer and the offset part of and address. They have various uses but each register has a specific function. They some time used with a segment register to point to far address (in a 1Mb range). The register with an "E" prefix can only be used in protected mode.
+
+ES:EDI EDI DI : Destination index register
+                Used for string, memory array copying and setting and
+                for far pointer addressing with ES
+
+DS:ESI EDI SI : Source index register
+                Used for string and memory array copying
+
+SS:EBP EBP BP : Stack Base pointer register
+                Holds the base address of the stack
+                
+SS:ESP ESP SP : Stack pointer register
+                Holds the top address of the stack
+
+CS:EIP EIP IP : Index Pointer
+                Holds the offset of the next instruction
+                It can only be read 
+
+```
