@@ -1,0 +1,1 @@
+First of all, you have to understand that there is a specification for all these things. These specifications differ from one assembly language to another and from one operating system to the other.

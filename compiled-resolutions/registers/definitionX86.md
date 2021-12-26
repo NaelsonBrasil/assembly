@@ -50,8 +50,6 @@ Segmentation is the process in which the main memory of the computer is logicall
 ![MySQL](https://qph.fs.quoracdn.net/main-qimg-393f9b74e7266dab96e3a6be84284dac-pjlq)
 
 
-
-
 ##### Indexes and pointers
 
 ```

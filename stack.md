@@ -1,11 +1,12 @@
+https://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86/
+-  the stack is decrement when you add things and increment when you deallocated the things then the stack get spaces that have been miss
 Most function prologs look something like:
 
 ``` 
 push ebp      ; Preserve current frame pointer
 mov ebp, esp  ; Create new frame pointer pointing to current stack top
-sub esp, 20   ; allocate 20 bytes worth of locals on stack.
+sub esp, 20   ; allocate 20 bytes worth of locals on stack. 
 ``` 
-
 
 ### Can someone provide a visualization or detailed flow of the stack frame in this Assembly MIPS code block?
 - To visualize, first we need to establish the direction of visualization, usually whether up or down.  Both are correct, but one may be - harder to read than the other.
@@ -37,3 +38,26 @@ The data corresponding to the ss address is equivalent to the local variable in 
 ss is equivalent to the first address of the stack segment sp is equivalent to the offset address of the stack segment
 
 es is the extended segment register; 
+
+
+
+Stacks Data Structure:
+A stack is an array-like data structure in the memory in which data can be stored and removed from a location
+called the 'top' of the stack. The data need to be stored is 'pushed' into the stack and data to be retrieved is
+'popped' out from the stack. Stack is a LIFO data structure, i.e., the data stored first is retrieved last.
+
+
+Only words or doublewords could be saved into the stack, not a byte.
+
+The stack implementation has the following characteristics:
+ Only words or doublewords could be saved into the stack, not a byte.
+ The stack grows in the reverse direction i.e., toward the lower memory address
+ The top of the stack points to the last item inserted in the stack; it points to the lower byte of the last word
+inserted.
+As we discussed about storing the values of the registers in the stack before using them for some use; it can be
+done in following way:
+; Save the AX and BX registers in the stack
+PUSH AX
+PUSH BX
+; Use the registers for other purpose
+MOV AX, VALUE1
