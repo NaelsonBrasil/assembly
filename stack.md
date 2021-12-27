@@ -1,4 +1,8 @@
 https://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86/
+
+
+https://0xinfection.github.io/reversing/pages/part-15-stack.html
+
 -  the stack is decrement when you add things and increment when you deallocated the things then the stack get spaces that have been miss
 Most function prologs look something like:
 
