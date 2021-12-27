@@ -61,3 +61,31 @@ PUSH AX
 PUSH BX
 ; Use the registers for other purpose
 MOV AX, VALUE1
+
+
+### 
+It depends on the architecture. To check your own system, use this code from GeeksForGeeks:
+
+```
+// C program to check whether stack grows 
+// downward or upward. 
+#include<stdio.h> 
+
+void fun(int *main_local_addr) 
+{ 
+    int fun_local; 
+    if (main_local_addr < &fun_local) 
+        printf("Stack grows upward\n"); 
+    else
+        printf("Stack grows downward\n"); 
+} 
+
+int main() 
+{ 
+    // fun's local variable 
+    int main_local; 
+
+    fun(&main_local); 
+    return 0; 
+}
+```
