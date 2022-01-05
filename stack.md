@@ -2,6 +2,11 @@ https://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86/
 
 https://docs.microsoft.com/en-us/cpp/build/x64-software-conventions?view=msvc-170
 
+```
+A negative offset should never be used because data "above" the stack cannot be counted on to stay the way you left it. The operation of reading from the stack without popping is often referred to as "peeking", but since this isn't the official term for it this wikibook won't use it. ```
+https://en.wikibooks.org/wiki/X86_Disassembly/The_Stack
+
+- 
 https://0xinfection.github.io/reversing/pages/part-15-stack.html
 
 -  the stack is decrement when you add things and increment when you deallocated the things then the stack get spaces that have been miss
